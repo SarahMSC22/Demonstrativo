@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/local_cafe"
+        android:icon="@drawable/local_cafe"
+        android:title="@string/cafe"/>
+
+    <item
+        android:id="@+id/local_cake"
+        android:icon="@drawable/local_cake"
+        android:title="@string/cake"/>
+
+    <item
+        android:id="@+id/local_bar"
+        android:icon="@drawable/local_bar"
+        android:title="@string/bar"/>
+    <item
+        android:id="@+id/local_fastfood"
+        android:icon="@drawable/local_fastfood"
+        android:title="@string/fast_food"/>
+
+    <item
+        android:id="@+id/local_pizza"
+        android:icon="@drawable/local_pizza"
+        android:title="@string/pizza"/>
+
+</menu>
