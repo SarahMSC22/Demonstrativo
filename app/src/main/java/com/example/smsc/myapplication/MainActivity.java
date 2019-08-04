@@ -3,21 +3,25 @@ package com.example.smsc.myapplication;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.menu);
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.menu);
 
         if (bottomNavigationView != null) {
 
@@ -35,11 +39,27 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         }
+        FloatingActionButton button =(FloatingActionButton) findViewById(R.id.floating_button);
+        button.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick (View v) {
+                Intent intent = (new Intent(MainActivity.this,MainActivity2.class));
+                startActivity(intent);
+            }
+        });
 
 
 
 
     }
+
+
+    public BottomNavigationView getBottomNavigationView() {
+        return bottomNavigationView;
+    }
+
     protected void selectFragment(MenuItem item) {
 
         item.setChecked(true);
@@ -81,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
+     {
+
+    }
 
 
 }

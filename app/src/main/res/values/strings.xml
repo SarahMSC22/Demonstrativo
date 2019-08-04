@@ -5,4 +5,5 @@
     <string name="bar">bar</string>
     <string name="fast_food">fast food</string>
     <string name="pizza">pizza</string>
+    <string name="go_to_fast_food">Ir para Fast Food</string>
 </resources>
