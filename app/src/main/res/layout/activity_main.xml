@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activitys.MainActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -71,7 +71,7 @@
         tools:visibility="visible" />
 
     <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--tools:context="com.example.smsc.myapplication.MainActivity2"-->
+    <!--tools:context="com.example.smsc.myapplication.activitys.MainActivity2"-->
 
 
 </android.support.constraint.ConstraintLayout>

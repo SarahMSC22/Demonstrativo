@@ -1,15 +1,19 @@
-package com.example.smsc.myapplication;
+package com.example.smsc.myapplication.lists;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.smsc.myapplication.R;
+import com.example.smsc.myapplication.activitys.CoffeeActivity;
 
 public class ListCoffeAdpater extends RecyclerView.Adapter<ListCoffeAdpater.ViewHolder> {
     private ListCoffe[] listCoffesdata;
@@ -30,16 +34,23 @@ public class ListCoffeAdpater extends RecyclerView.Adapter<ListCoffeAdpater.View
     @Override
     public void onBindViewHolder(ListCoffeAdpater.ViewHolder holder, final int position) {
         final ListCoffe myListData = listCoffesdata[position];
-        holder.textView.setText(listCoffesdata[position].getDescription());
+        holder.textView.setText(listCoffesdata[position].getTitle());
         holder.imageView.setImageResource(listCoffesdata[position].getImgId());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(view.getContext(), "click em: " + listCoffesdata[position].getDescription(), Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "click em: " + listCoffesdata[position].getTitle(), Toast.LENGTH_LONG).show();
+                Intent intent = (new Intent(view.getContext(), CoffeeActivity.class));
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("item", listCoffesdata[position]);
+                intent.putExtra("pacote1", bundle);
+                view.getContext().startActivity(intent);
+
 
             }
         });
+        holder.ratingView.setProgress(listCoffesdata[position].getNumStars());
     }
 
 
@@ -49,6 +60,7 @@ public class ListCoffeAdpater extends RecyclerView.Adapter<ListCoffeAdpater.View
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final RatingBar ratingView;
         public ImageView imageView;
         public TextView textView;
         public RelativeLayout relativeLayout;
@@ -58,6 +70,7 @@ public class ListCoffeAdpater extends RecyclerView.Adapter<ListCoffeAdpater.View
             this.imageView = (ImageView) itemView.findViewById(R.id.imageView);
             this.textView = (TextView) itemView.findViewById(R.id.textView);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
+            ratingView = (RatingBar) itemView.findViewById(R.id.ratingBar);
         }
 
 //        protected void onCreate(Bundle savedInstanceState) {

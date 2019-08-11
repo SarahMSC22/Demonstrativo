@@ -1,4 +1,4 @@
-package com.example.smsc.myapplication;
+package com.example.smsc.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.smsc.myapplication.R;
 
 public class FastFoodFragment extends Fragment {
     @Nullable

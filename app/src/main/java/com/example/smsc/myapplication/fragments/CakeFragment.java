@@ -1,4 +1,4 @@
-package com.example.smsc.myapplication;
+package com.example.smsc.myapplication.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.smsc.myapplication.lists.MyListAdapter;
+import com.example.smsc.myapplication.lists.MyListData;
+import com.example.smsc.myapplication.R;
 
 public class CakeFragment extends Fragment {
     @Nullable

@@ -1,10 +1,9 @@
-package com.example.smsc.myapplication;
-
-public class ListCoffe {
+package com.example.smsc.myapplication.lists;
+public class MyListData {
     private String description;
     private int imgId;
 
-    public ListCoffe(String description, int imgId) {
+    public MyListData(String description, int imgId) {
         this.description = description;
         this.imgId = imgId;
     }

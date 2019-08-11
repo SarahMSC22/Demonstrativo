@@ -1,4 +1,4 @@
-package com.example.smsc.myapplication;
+package com.example.smsc.myapplication.activitys;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,6 +12,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.example.smsc.myapplication.R;
+import com.example.smsc.myapplication.fragments.BarFragment;
+import com.example.smsc.myapplication.fragments.CakeFragment;
+import com.example.smsc.myapplication.fragments.CoffeeFragment;
+import com.example.smsc.myapplication.fragments.FastFoodFragment;
+import com.example.smsc.myapplication.fragments.PizzaFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.local_cafe:
                 // Action to perform when Home Menu item is selected.
-                pushFragment(new CafeFragment());
+                pushFragment(new CoffeeFragment());
                 break;
             case R.id.local_cake:
                 // Action to perform when Bag Menu item is selected.
