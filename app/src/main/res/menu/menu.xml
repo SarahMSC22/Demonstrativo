@@ -17,7 +17,7 @@
         android:title="@string/bar"/>
     <item
         android:id="@+id/local_fastfood"
-        android:icon="@drawable/local_fastfood"
+        android:icon="@drawable/local_fast_food"
         android:title="@string/fast_food"/>
 
     <item

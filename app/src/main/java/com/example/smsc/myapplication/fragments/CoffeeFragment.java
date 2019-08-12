@@ -19,7 +19,7 @@ public class CoffeeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_cafe,container, false);
+        View rootView = inflater.inflate(R.layout.fragment_coffee,container, false);
 
         ListCoffe[] listCoffes = new ListCoffe[] {
                 new ListCoffe("Expresso", R.drawable.item_1, getNumStars(),"aaaaaaa\nbbbbbb\ncccccccc"),
