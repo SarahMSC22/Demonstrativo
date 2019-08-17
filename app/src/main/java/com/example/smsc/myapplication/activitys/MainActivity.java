@@ -9,16 +9,27 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.smsc.myapplication.CEP;
+import com.example.smsc.myapplication.CEPService;
 import com.example.smsc.myapplication.R;
+import com.example.smsc.myapplication.RetrofitConfig;
 import com.example.smsc.myapplication.fragments.BarFragment;
 import com.example.smsc.myapplication.fragments.CakeFragment;
 import com.example.smsc.myapplication.fragments.CoffeeFragment;
 import com.example.smsc.myapplication.fragments.FastFoodFragment;
 import com.example.smsc.myapplication.fragments.PizzaFragment;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -59,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     public BottomNavigationView getBottomNavigationView() {
         return bottomNavigationView;

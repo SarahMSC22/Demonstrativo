@@ -5,20 +5,52 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="186dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginBottom="332dp"
-        android:text="Você clicou no FloatButton!"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:layout_width="match_parent"
+        tools:context="br.com.matheuscastiglioni.blog.requisicao_http_retrofit.MainActivity">
+
+        <EditText
+            android:digits="0123456789"
+            android:layout_height="wrap_content"
+            android:hint="CEP"
+            android:id="@+id/etMain_cep"
+            android:textColor="#595959"
+            android:textSize="25sp"
+            android:inputType="number"
+            android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <Button
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMain_buscarCep"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="Buscar CEP"
+                android:textColor="#FDFDFD"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:id="@+id/etMain_resposta"
+            android:textColor="#595959"
+            android:textSize="20sp"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
