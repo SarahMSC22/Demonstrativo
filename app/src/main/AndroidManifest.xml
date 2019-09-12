@@ -23,6 +23,7 @@
             android:name=".activitys.ScreenFloatButton"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activitys.CoffeeActivity" />
+        <activity android:name=".activitys.FastFoodActivity" />
     </application>
 
 </manifest>

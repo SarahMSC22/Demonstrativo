@@ -18,6 +18,7 @@ public class RetrofitConfig {
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
     }
+
     public CEPService getCEPService(){
         return this.retrofit.create(CEPService.class);
     }
